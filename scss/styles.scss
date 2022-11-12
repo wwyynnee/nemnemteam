@@ -135,6 +135,59 @@ nav {
   }
 }
 
+// Меню-бургер
+.menu {
+  @include center;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: $black;
+  z-index: 2;
+  flex-direction: column;
+  top: 0;
+  color: white;
+  p {
+    @include center;
+    height: 50px;
+    width: 50px;
+    padding: 2.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    z-index: 3;
+  }
+  ul {
+    @include center;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    list-style: none;
+    font-size: 1.35rem;
+    width: 100%;
+    flex-direction: column;
+    li {
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      margin: 0 1rem;
+      width: calc(75vw - 2rem);
+      &:hover {
+        background-color: #ffffff10;
+        color: $pink;
+      }
+      @media screen and (max-width: 400px) {
+        width: calc(100vw - 2rem);
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+  }
+}
+
 // Главная часть
 main {
   .main {

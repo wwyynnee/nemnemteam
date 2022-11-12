@@ -136,6 +136,66 @@ nav .nav__menu {
   }
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: #000104;
+  z-index: 2;
+  flex-direction: column;
+  top: 0;
+  color: white;
+}
+.menu p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  padding: 2.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  z-index: 3;
+}
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  list-style: none;
+  font-size: 1.35rem;
+  width: 100%;
+  flex-direction: column;
+}
+.menu ul li {
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  margin: 0 1rem;
+  width: calc(75vw - 2rem);
+}
+.menu ul li:hover {
+  background-color: rgba(255, 255, 255, 0.062745098);
+  color: #fd01fc;
+}
+@media screen and (max-width: 400px) {
+  .menu ul li {
+    width: calc(100vw - 2rem);
+  }
+}
+.menu svg {
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+}
+
 main .main {
   background-image: url("images/background/bg.gif");
   background-attachment: fixed;

@@ -9,6 +9,7 @@
   <title>Ñěm ņĕm Ťêām</title>
   <link rel="icon" href="images/icon/nnt.png" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 
 <body>
@@ -36,9 +37,29 @@
           </a>
         </ul>
       </div>
-      <div class="nav__menu">≡</div>
+      <div class="nav__menu" onclick="menu()">≡</div>
     </div>
   </nav>
+  <div class="menu">
+    <p>⨉</p>
+    <ul>
+      <a href="https://discord.gg/Vs75xmC" target="_blank">
+        <li class="nav__item">Присоединиться</li>
+      </a>
+      <a href="#advantage">
+        <li class="nav__item">Преимущества</li>
+      </a>
+      <a href="#status">
+        <li class="nav__item">Статистика</li>
+      </a>
+      <a href="#support">
+        <li class="nav__item">Поддержка</li>
+      </a>
+    </ul>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -2.27254 11 2.273" class="line">
+      <path d="M0 0 11 0C11-1 9-3 6-2 4-1 1-2 0 0" fill="white"/>
+    </svg>
+  </div>
   <main>
     <div class="main">
       <div class="main__items">
@@ -78,6 +99,16 @@
       </div>
     </div>
   </main>
+  <script>
+    // Меню-бургер
+    $(".menu").hide();
+    $(".menu p, .nav__item").on("click", (e) => {
+      $(".menu").hide();
+    })
+    const menu = () => {
+      $(".menu").show();
+    }
+  </script>
 </body>
 
 </html>
