@@ -24,6 +24,7 @@ $gradient: linear-gradient(to right, #bc4e9c, #f80759);
 
 html, body {
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
   overflow-x: hidden;
   height: 100%;
   width: 100%;
@@ -102,9 +103,11 @@ nav {
         @include center;
         list-style: none;
         height: 5rem;
-        li {
+        a {
           @include nav;
-          display: inline;
+          li {
+            display: inline;
+          }
           &:first-child {
             @include button;
           }
@@ -136,6 +139,7 @@ nav {
 main {
   .main {
     background-image: url("images/background/bg.gif");
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 5rem;
@@ -182,13 +186,32 @@ main {
     font-family: "Andika", sans-serif;
     @include center;
     color: white;
+    &__images {
+      @include center;
+      margin: 1.5rem 1rem;
+      img {
+        border-radius: 200px;
+        @media screen and (max-width: 320px) {
+          width: 90%;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        margin: 1.5rem 1rem 0;
+      }
+    }
     &__items {
       display: flex;
       flex-direction: column;
       width: 50%;
+      @media screen and (max-width: 992px) {
+        width: 90%;
+      }
+      @media screen and (max-width: 400px) {
+        width: 100%;
+      }
     }
     &__item {
-      margin: 1rem;
+      margin: .5rem;
       p {
         font-size: 2.5rem;
         margin: 1rem 0;
@@ -205,12 +228,21 @@ main {
           list-style: none;
           margin: .5rem 1rem .5rem 0;
           &:before {
-            content: url("https://img.icons8.com/nolan/32/1A6DFF/C822FF/approval.png");
+            content: url("images/icon/approval.png");
             padding-right: .3rem;
             height: .2rem;
           }
         }
+        @media screen and (max-width: 400px) {
+          flex-direction: column;
+        }
       }
+      @media screen and (max-width: 400px) {
+        margin: 1rem;
+      }
+    }
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
     }
   }
 }
