@@ -34,6 +34,17 @@ a {
   max-width: 1920px;
 }
 
+.svg {
+  background-color: #111;
+}
+.svg svg {
+  background-color: #000104;
+}
+
+.svg-rotate {
+  transform: rotate(180deg);
+}
+
 nav .nav {
   display: flex;
   position: fixed;
@@ -349,6 +360,52 @@ main .advantage__item ul li:before {
 @media screen and (max-width: 992px) {
   main .advantage {
     flex-direction: column;
+  }
+}
+main .status {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #111;
+  color: white;
+  padding: 2rem 3rem;
+}
+main .status__items {
+  display: flex;
+  max-width: 1920px;
+  align-self: center;
+  width: 100%;
+}
+main .status__items ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+main .status__items ul li {
+  padding: 1rem;
+  cursor: pointer;
+}
+main .status__items ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1254901961) !important;
+  transition: 0.3s;
+}
+@media screen and (max-width: 470px) {
+  main .status__items ul {
+    justify-content: center;
+  }
+}
+main .status__items iframe {
+  height: 400px;
+}
+@media screen and (max-width: 796px) {
+  main .status__items iframe {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 535px) {
+  main .status {
+    padding: 2rem 1rem;
   }
 }
 

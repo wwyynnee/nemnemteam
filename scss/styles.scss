@@ -8,6 +8,7 @@
 // Цвета
 $pink: #fd01fc;
 $black: #000104;
+$light-black: #111;
 $gradient: linear-gradient(to right, #bc4e9c, #f80759);
 
 ::-webkit-scrollbar {
@@ -64,6 +65,16 @@ a {
 .wrapper {
   display: flex;
   max-width: 1920px;
+}
+
+.svg {
+  background-color: $light-black;
+  svg {
+    background-color: $black;
+  }
+}
+.svg-rotate {
+  transform: rotate(180deg);
 }
 
 // Навигация
@@ -311,5 +322,46 @@ main {
       flex-direction: column;
     }
   }
+  
+  // Статистика
+  .status {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $light-black;
+    color: white;
+    padding: 2rem 3rem;
+    &__items {
+      display: flex;
+      max-width: 1920px;
+      align-self: center;
+      width: 100%;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-bottom: 1rem;
+        li {
+          padding: 1rem;
+          cursor: pointer;
+          &:hover {
+            background-color: #ffffff20 !important;
+            transition: 0.3s;
+          }
+        }
+        @media screen and (max-width: 470px) {
+          justify-content: center;
+        }
+      }
+      iframe {
+        height: 400px;
+        @media screen and (max-width: 796px) {
+          height: 200px;
+        }
+      }
+    }
+    @media screen and (max-width: 535px) {
+      padding: 2rem 1rem;
+    }
+  }
 }
-
