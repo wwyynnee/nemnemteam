@@ -61,6 +61,11 @@ a {
   color: white;
 }
 
+.wrapper {
+  display: flex;
+  max-width: 1920px;
+}
+
 // Навигация
 nav {
   .nav {
@@ -71,6 +76,7 @@ nav {
     font-size: 1.1rem;
     height: 5rem;
     color: white;
+    z-index: 1;
     &__main {
       @include center;
       margin: 0 3rem;
@@ -132,6 +138,9 @@ nav {
     @media screen and (max-width: 1080px) {
       justify-content: space-between;
     }
+    @media screen and (min-width: 1921px) {
+      justify-content: center;
+    }
   }
 }
 
@@ -140,7 +149,6 @@ nav {
   @include center;
   position: fixed;
   height: 100vh;
-  width: 100%;
   background-color: $black;
   z-index: 2;
   flex-direction: column;
@@ -197,6 +205,7 @@ main {
     background-size: cover;
     margin-top: 5rem;
     height: calc(100vh - 5rem);
+    width: 100vw;
     &__items {
       @include center;
       flex-direction: column;
@@ -239,9 +248,11 @@ main {
     font-family: "Andika", sans-serif;
     @include center;
     color: white;
+    padding: 3rem 0;
     &__images {
       @include center;
       margin: 1.5rem 1rem;
+      padding: 0 2rem;
       img {
         border-radius: 200px;
         @media screen and (max-width: 320px) {
@@ -250,12 +261,14 @@ main {
       }
       @media screen and (max-width: 992px) {
         margin: 1.5rem 1rem 0;
+        padding: 0;
       }
     }
     &__items {
       display: flex;
       flex-direction: column;
       width: 50%;
+      max-width: 1200px;
       @media screen and (max-width: 992px) {
         width: 90%;
       }

@@ -29,6 +29,11 @@ a {
   text-decoration: none;
 }
 
+.wrapper {
+  display: flex;
+  max-width: 1920px;
+}
+
 nav .nav {
   display: flex;
   position: fixed;
@@ -37,6 +42,7 @@ nav .nav {
   font-size: 1.1rem;
   height: 5rem;
   color: white;
+  z-index: 1;
 }
 nav .nav__main {
   display: flex;
@@ -135,6 +141,11 @@ nav .nav__menu {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 1921px) {
+  nav .nav {
+    justify-content: center;
+  }
+}
 
 .menu {
   display: flex;
@@ -142,7 +153,6 @@ nav .nav__menu {
   justify-content: center;
   position: fixed;
   height: 100vh;
-  width: 100%;
   background-color: #000104;
   z-index: 2;
   flex-direction: column;
@@ -203,6 +213,7 @@ main .main {
   background-size: cover;
   margin-top: 5rem;
   height: calc(100vh - 5rem);
+  width: 100vw;
 }
 main .main__items {
   display: flex;
@@ -261,12 +272,14 @@ main .advantage {
   align-items: center;
   justify-content: center;
   color: white;
+  padding: 3rem 0;
 }
 main .advantage__images {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 1.5rem 1rem;
+  padding: 0 2rem;
 }
 main .advantage__images img {
   border-radius: 200px;
@@ -279,12 +292,14 @@ main .advantage__images img {
 @media screen and (max-width: 992px) {
   main .advantage__images {
     margin: 1.5rem 1rem 0;
+    padding: 0;
   }
 }
 main .advantage__items {
   display: flex;
   flex-direction: column;
   width: 50%;
+  max-width: 1200px;
 }
 @media screen and (max-width: 992px) {
   main .advantage__items {

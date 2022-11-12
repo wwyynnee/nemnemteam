@@ -13,102 +13,95 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav">
-      <a href="#">
-        <div class="nav__main">
-          <img src="images/icon/nnt.png" alt />
-          <p>Ñěm ņĕm Ťêām</p>
-        </div>
-      </a>
-      <div class="nav__items">
-        <ul>
-          <a href="https://discord.gg/Vs75xmC" target="_blank">
-            <li class="nav__item">Присоединиться</li>
-          </a>
-          <a href="#advantage">
-            <li class="nav__item">Преимущества</li>
-          </a>
-          <a href="#status">
-            <li class="nav__item">Статистика</li>
-          </a>
-          <a href="#support">
-            <li class="nav__item">Поддержка</li>
-          </a>
-        </ul>
-      </div>
-      <div class="nav__menu" onclick="menu()">≡</div>
-    </div>
-  </nav>
-  <div class="menu">
-    <p>⨉</p>
-    <ul>
-      <a href="https://discord.gg/Vs75xmC" target="_blank">
-        <li class="nav__item">Присоединиться</li>
-      </a>
-      <a href="#advantage">
-        <li class="nav__item">Преимущества</li>
-      </a>
-      <a href="#status">
-        <li class="nav__item">Статистика</li>
-      </a>
-      <a href="#support">
-        <li class="nav__item">Поддержка</li>
-      </a>
-    </ul>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -2.27254 11 2.273" class="line">
-      <path d="M0 0 11 0C11-1 9-3 6-2 4-1 1-2 0 0" fill="white"/>
-    </svg>
-  </div>
-  <main>
-    <div class="main">
-      <div class="main__items">
-        <h1>Ñěm ņĕm Ťêām</h1>
-        <h2>Один из самых популярных культурных СНГ сообществ</h2>
-        <a href="https://discord.gg/Vs75xmC" target="_blank">Присоединиться</a>
-      </div>
-    </div>
-    <div class="advantage" id="advantage">
-      <div class="advantage__images">
-        <img src="images/icon/nnt2.png" alt />
-      </div>
-      <div class="advantage__items">
-        <div class="advantage__item">
-          <p>Ñěm ņĕm Ťêām</p>
-          <span>Трижды крашнутый сервер, являющийся одним из самых популярных культурных СНГ
-            сообществ.
-            Если устали от токсиков, вам к нам!
-            Уютный, теплый, ламповый сервер! За окном идет дождь, а Вы сидите и общаетесь с нами! Мы ждем Вас!
-          </span>
-        </div>
-        <div class="advantage__item">
+  <div class="wrapper">
+    <nav>
+      <div class="nav">
+        <a href="#">
+          <div class="nav__main">
+            <img src="images/icon/nnt.png" alt />
+            <p>Ñěm ņĕm Ťêām</p>
+          </div>
+        </a>
+        <div class="nav__items">
           <ul>
-            <li>Сервер ютубера</li>
-            <li>Экономика</li>
-            <li>Персональный бот</li>
-            <li>Кланы</li>
-            <li>Мероприятия</li>
-            <li>Система сезонов</li>
-            <li>Мало пинга</li>
-            <li>Набор в персонал</li>
-            <li>Частые розыгрыши на нитро</li>
-            <li>Ваша безопасность</li>
-            <li>Ваша реклама за серверную валюту</li>
+            <a href="https://discord.gg/Vs75xmC" target="_blank">
+              <li class="nav__item">Присоединиться</li>
+            </a>
+            <a href="#advantage">
+              <li class="nav__item">Преимущества</li>
+            </a>
+            <a href="#status">
+              <li class="nav__item">Статистика</li>
+            </a>
+            <a href="#support">
+              <li class="nav__item">Поддержка</li>
+            </a>
           </ul>
         </div>
+        <div class="nav__menu" onclick="menu()">≡</div>
       </div>
+    </nav>
+    <div class="menu">
+      <p>⨉</p>
+      <ul>
+        <a href="https://discord.gg/Vs75xmC" target="_blank">
+          <li class="nav__item">Присоединиться</li>
+        </a>
+        <a href="#advantage">
+          <li class="nav__item">Преимущества</li>
+        </a>
+        <a href="#status">
+          <li class="nav__item">Статистика</li>
+        </a>
+        <a href="#support">
+          <li class="nav__item">Поддержка</li>
+        </a>
+      </ul>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -2.27254 11 2.273" class="line">
+        <path d="M0 0 11 0C11-1 9-3 6-2 4-1 1-2 0 0" fill="white"/>
+      </svg>
     </div>
-  </main>
-  <script>
-    // Меню-бургер
-    $(".menu").hide();
-    $(".menu p, .nav__item").on("click", (e) => {
-      $(".menu").hide();
-    })
-    const menu = () => {
-      $(".menu").show();
-    }
-  </script>
+    <main>
+      <div class="main">
+        <div class="main__items">
+          <h1>Ñěm ņĕm Ťêām</h1>
+          <h2>Один из самых популярных культурных СНГ сообществ</h2>
+          <a href="https://discord.gg/Vs75xmC" target="_blank">Присоединиться</a>
+        </div>
+      </div>
+      <div class="advantage" id="advantage">
+        <div class="advantage__images">
+          <img src="images/icon/nnt2.png" alt />
+        </div>
+        <div class="advantage__items">
+          <div class="advantage__item">
+            <p>Ñěm ņĕm Ťêām</p>
+            <span>Трижды крашнутый сервер, являющийся одним из самых популярных культурных СНГ
+              сообществ.
+              Если устали от токсиков, вам к нам!
+              Уютный, теплый, ламповый сервер! За окном идет дождь, а Вы сидите и общаетесь с нами! Мы ждем Вас!
+            </span>
+          </div>
+          <div class="advantage__item">
+            <ul>
+              <li>Сервер ютубера</li>
+              <li>Экономика</li>
+              <li>Персональный бот</li>
+              <li>Кланы</li>
+              <li>Мероприятия</li>
+              <li>Система сезонов</li>
+              <li>Мало пинга</li>
+              <li>Набор в персонал</li>
+              <li>Частые розыгрыши на нитро</li>
+              <li>Ваша безопасность</li>
+              <li>Ваша реклама за серверную валюту</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js" defer></script>
 </body>
 
 </html>
