@@ -1,0 +1,14 @@
+{
+  "name": "nemnemteam",
+  "version": "1.0.0",
+  "description": "Сайт для дискорд сервера Nem Nem Team",
+  "main": "index.js",
+  "author": "Wynne",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.56.1"
+  },
+  "scripts": {
+    "start": "sass --watch scss/styles.scss style.css"
+  }
+}
