@@ -299,8 +299,13 @@ main {
     background-color: $black;
     font-family: "Andika", sans-serif;
     @include center;
+    flex-direction: column;
     color: white;
     padding: 3rem 0;
+    &__containers {
+      @include center;
+      flex-wrap: wrap;
+    }
     &__images {
       @include center;
       margin: 1.5rem 1rem;
@@ -359,8 +364,17 @@ main {
         margin: 1rem;
       }
     }
-    @media screen and (max-width: 992px) {
+    &__container {
+      @include center;
       flex-direction: column;
+      max-width: 300px;
+      margin: 1rem;
+      padding: 3rem 0;
+      text-align: center;
+      p {
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
     }
   }
   
