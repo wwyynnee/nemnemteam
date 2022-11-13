@@ -7,16 +7,17 @@
   margin: 0;
 }
 
-::-webkit-scrollbar {
-  background-color: #000104;
-  width: 5px;
+@media screen and (min-width: 480px) {
+  ::-webkit-scrollbar {
+    background-color: #000104;
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #bc4e9c, #f80759);
+  }
 }
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to right, #bc4e9c, #f80759);
-}
-
 html, body {
+  background-color: #111;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -27,6 +28,38 @@ html, body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background: #111;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  z-index: 99;
+  color: white;
+}
+.preloader__item img {
+  height: 270px;
+  width: 270px;
+}
+.preloader__item p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.loaded .preloader {
+  display: none;
+  overflow-y: scroll;
+}
+
+.loaded__hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
 }
 
 .wrapper {
@@ -42,7 +75,13 @@ a {
 }
 
 .svg-rotate {
+  background-color: #000104;
   transform: rotate(180deg);
+}
+@media screen and (min-width: 480px) {
+  .svg-rotate {
+    margin-top: -2.1rem;
+  }
 }
 
 nav .nav {
@@ -220,7 +259,6 @@ nav .nav__menu {
 
 main .main {
   background-image: url("images/background/bg.gif");
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 5rem;
@@ -276,6 +314,11 @@ main .main__items a {
   justify-content: center;
   padding: 1.75rem 5rem;
   margin: 1.5rem 1rem;
+}
+@media screen and (min-width: 480px) {
+  main .main {
+    background-attachment: fixed;
+  }
 }
 main .advantage {
   background-color: #000104;
@@ -386,10 +429,16 @@ main .status__items ul {
 main .status__items ul li {
   padding: 1rem;
   cursor: pointer;
+  text-align: center;
 }
 main .status__items ul li:hover {
   background-color: rgba(255, 255, 255, 0.1254901961) !important;
   transition: 0.3s;
+}
+@media screen and (max-width: 382px) {
+  main .status__items ul li {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 470px) {
   main .status__items ul {
@@ -407,6 +456,67 @@ main .status__items iframe {
 @media screen and (max-width: 535px) {
   main .status {
     padding: 2rem 1rem;
+  }
+}
+main .support {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #000104;
+  color: white;
+}
+main .support__container {
+  padding: 3rem 0;
+}
+main .support__container p {
+  font-family: "Andika", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+}
+main .support__container a {
+  background: linear-gradient(to right, #bc4e9c, #f80759);
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  height: 3rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem 5rem;
+  margin: 1.5rem 1rem;
+}
+@media screen and (max-width: 320px) {
+  main .support__container a {
+    margin: 1.5rem 0;
+  }
+}
+main .developer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #111;
+  color: white;
+}
+main .developer p {
+  margin: 1rem 2rem;
+}
+main .developer p span, main .developer p a {
+  color: #fd01fc;
+}
+main .developer p a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 487px) {
+  main .developer p {
+    margin: 0.5rem;
+  }
+}
+@media screen and (max-width: 487px) {
+  main .developer {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

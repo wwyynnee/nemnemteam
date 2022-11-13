@@ -13,6 +13,12 @@
 </head>
 
 <body>
+  <div class="preloader">
+    <div class="preloader__item">
+      <img src="images/icon/nnt.png" alt />
+      <p>Загрузка...</p>
+    </div>
+  </div>
   <div class="wrapper">
     <nav>
       <div class="nav">
@@ -117,12 +123,31 @@
           <iframe src="https://discordserver.info/705807711174000750/widgets/chart/users" width="100%" height="100%" frameborder="0"></iframe>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -2 20 2" class="svg-rotate">
-        <path d="M0 0 0-2C2-1 3-2 4-1 5 0 7-2 8-1 9 0 11-2 12-1 13 0 15-2 16-1 17 0 19-1 20-2L20 0" fill="#111"/>
-      </svg>
+      <div class="support" id="support">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -2 20 2" class="svg-rotate">
+          <path d="M0 0 0-2C2-1 3-2 4-1 5 0 7-2 8-1 9 0 11-2 12-1 13 0 15-2 16-1 17 0 19-1 20-2L20 0" fill="#111"/>
+        </svg>
+        <div class="support__container">
+          <p>24/7 Поддержка</p>
+          <a href="https://discord.gg/Vs75xmC" target="_blank">Присоединиться</a>
+        </div>
+      </div>
+      <div class="developer">
+        <p><span>Ñěm ņĕm Ťêām</span> &copy; 2022</p>
+        <p>Разработка сайта: <a href="https://wynne.tk" target="_blank">Wynne</a></p>
+      </div>
     </main>
   </div>
   <script src="script.js" defer></script>
+  <script>
+    window.onload = () => {
+      document.body.classList.add("loaded__hiding");
+      window.setTimeout(() => {
+        document.body.classList.add("loaded");
+        document.body.classList.remove("loaded__hiding");
+      }, 500);
+    }
+  </script>
 </body>
 
 </html>
