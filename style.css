@@ -42,6 +42,54 @@ a {
   z-index: 99;
   color: white;
 }
+.preloader__item .loader {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: #fd01fc;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  animation: 1.8s spin infinite linear;
+}
+.preloader__item .loader2 {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: #fd01fc;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  height: 240px;
+  animation: 1.6s spin infinite linear;
+}
+.preloader__item .loader3 {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: #fd01fc;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  height: 230px;
+  animation: 1.4s spin infinite linear;
+}
+.preloader__item .loader4 {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: #fd01fc;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  animation: 1.2s spin infinite linear;
+}
 .preloader__item img {
   height: 270px;
   width: 270px;
@@ -52,6 +100,14 @@ a {
   margin: 1rem;
 }
 
+@keyframes spin {
+  from {
+    ransform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .loaded .preloader {
   display: none;
   overflow-y: scroll;
