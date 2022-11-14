@@ -472,8 +472,32 @@ main {
     flex-direction: column;
     background-color: $black;
     color: white;
-    &__container {
+    &__items {
+      @include center;
+      flex-wrap: wrap;
       padding: 3rem 0;
+    }
+    &__container {
+      iframe {
+        overflow: hidden;
+        width: 100vw;
+        height: 750px;
+        @media screen and (max-width: 560px) {
+          height: 775px;
+        }
+        @media screen and (max-width: 429px) {
+          height: 800px;
+        }
+        @media screen and (max-width: 334px) {
+          height: 850px;
+        }
+        @media screen and (max-width: 320px) {
+          height: 875px;
+        }
+        @media screen and (max-width: 305px) {
+          height: 900px;
+        }
+      }
       p {
         font-family: "Andika", sans-serif;
         font-weight: 600;

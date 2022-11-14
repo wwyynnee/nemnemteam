@@ -538,8 +538,42 @@ main .support {
   background-color: #000104;
   color: white;
 }
-main .support__container {
+main .support__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 3rem 0;
+}
+main .support__container iframe {
+  overflow: hidden;
+  width: 100vw;
+  height: 750px;
+}
+@media screen and (max-width: 560px) {
+  main .support__container iframe {
+    height: 775px;
+  }
+}
+@media screen and (max-width: 429px) {
+  main .support__container iframe {
+    height: 800px;
+  }
+}
+@media screen and (max-width: 334px) {
+  main .support__container iframe {
+    height: 850px;
+  }
+}
+@media screen and (max-width: 320px) {
+  main .support__container iframe {
+    height: 875px;
+  }
+}
+@media screen and (max-width: 305px) {
+  main .support__container iframe {
+    height: 900px;
+  }
 }
 main .support__container p {
   font-family: "Andika", sans-serif;
