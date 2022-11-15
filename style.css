@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Andika&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400&display=swap");
 * {
@@ -202,7 +203,7 @@ nav .nav__items ul a {
   justify-content: center;
   display: flex !important;
   height: 5rem;
-  padding: 0 2rem;
+  padding: 0 1.25rem;
   cursor: pointer;
 }
 nav .nav__items ul a:hover {
@@ -219,7 +220,7 @@ nav .nav__items ul a:first-child {
   height: 3rem;
   color: white;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1247px) {
   nav .nav__items {
     display: none;
   }
@@ -230,7 +231,7 @@ nav .nav__menu {
   font-size: 2rem;
   padding: 0 2rem;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1247px) {
   nav .nav__menu {
     display: flex;
     align-items: center;
@@ -242,7 +243,7 @@ nav .nav__menu {
     padding: 0 1rem;
   }
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1247px) {
   nav .nav {
     justify-content: space-between;
   }
@@ -310,7 +311,7 @@ nav .nav__menu {
 .menu svg {
   position: absolute;
   bottom: 0;
-  height: 40%;
+  height: 30%;
 }
 
 main .main {
@@ -530,12 +531,72 @@ main .status__items iframe {
     padding: 2rem 1rem;
   }
 }
+main .partners {
+  background-color: #000104;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.2rem;
+  color: white;
+}
+main .partners__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem 0;
+}
+main .partners__items p {
+  font-family: "Andika", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+main .partners__servers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1920px;
+}
+main .partners__container {
+  margin: 1.5rem;
+  width: 25%;
+}
+main .partners__container a {
+  background: linear-gradient(to right, #bc4e9c, #f80759);
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  height: 3rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem 5rem;
+  margin: 1.5rem 0;
+}
+@media screen and (max-width: 959px) {
+  main .partners__container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .partners__container {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .partners__container {
+    width: 100%;
+  }
+}
 main .support {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #000104;
+  background-color: #111;
   color: white;
 }
 main .support__items {
@@ -545,10 +606,22 @@ main .support__items {
   flex-wrap: wrap;
   padding: 3rem 0;
 }
+main .support__container {
+  /*a {
+    // Кнопка
+    @include button;
+    @include center;
+    padding: 1.75rem 5rem;
+    margin: 1.5rem 1rem;
+    @media screen and (max-width: 320px) {
+      margin: 1.5rem 0;
+    }
+  }*/
+}
 main .support__container iframe {
   overflow: hidden;
   width: 100vw;
-  height: 750px;
+  height: 740px;
 }
 @media screen and (max-width: 560px) {
   main .support__container iframe {
@@ -582,22 +655,40 @@ main .support__container p {
   text-align: center;
   margin: 1rem 0;
 }
-main .support__container a {
-  background: linear-gradient(to right, #bc4e9c, #f80759);
-  border-radius: 6px;
-  margin: 0.5rem 0;
-  height: 3rem;
+main .social {
+  background-color: #000104;
   color: white;
+}
+main .social p {
+  font-family: "Andika", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+main .social__items {
+  padding: 3rem 0;
+}
+main .social__icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.75rem 5rem;
-  margin: 1.5rem 1rem;
+  flex-wrap: wrap;
 }
-@media screen and (max-width: 320px) {
-  main .support__container a {
-    margin: 1.5rem 0;
-  }
+main .social__icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .social__icons a:nth-child(2) img {
+  width: 80px;
+}
+main .social__icons a img {
+  width: 90px;
+  margin: 1rem;
+}
+main .social__icons a img:hover {
+  transform: scale(1.05);
 }
 main .developer {
   display: flex;

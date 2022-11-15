@@ -49,7 +49,7 @@ a {
   @include center;
   display: flex !important;
   height: 5rem;
-  padding: 0 2rem;
+  padding: 0 1.25rem;
   cursor: pointer;
   &:hover {
     transition: 0.3s;
@@ -210,7 +210,7 @@ nav {
           }
         }
       }
-      @media screen and (max-width: 1080px) {
+      @media screen and (max-width: 1247px) {
         display: none;
       }
     }
@@ -219,14 +219,14 @@ nav {
       font-weight: 300px;
       font-size: 2rem;
       padding: 0 2rem;
-      @media screen and (max-width: 1080px) {
+      @media screen and (max-width: 1247px) {
         @include center;
       }
       @media screen and (max-width: 355px) {
         padding: 0 1rem;
       }
     }
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 1247px) {
       justify-content: space-between;
     }
     @media screen and (min-width: 1921px) {
@@ -284,7 +284,7 @@ nav {
   svg {
     position: absolute;
     bottom: 0;
-    height: 40%;
+    height: 30%;
   }
 }
 
@@ -466,11 +466,57 @@ main {
     }
   }
 
+  // Партнёры
+  .partners {
+    background-color: $black;
+    @include center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: white;
+    &__items {
+      @include center;
+      flex-direction: column;
+      padding: 3rem 0;
+      p {
+        font-family: "Andika", sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+        text-align: center;
+        margin: 1rem 0;
+      }
+    }
+    &__servers {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 1920px;
+    }
+    &__container {
+      margin: 1.5rem;
+      width: 25%;
+      a {
+        @include button;
+        @include center;
+        padding: 1.75rem 5rem;
+        margin: 1.5rem 0;
+      }
+      @media screen and (max-width: 959px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 768px) {
+        width: 75%;
+      }
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
+    }
+  }
+
   // Поддержка
   .support {
     @include center;
     flex-direction: column;
-    background-color: $black;
+    background-color: $light-black;
     color: white;
     &__items {
       @include center;
@@ -481,7 +527,7 @@ main {
       iframe {
         overflow: hidden;
         width: 100vw;
-        height: 750px;
+        height: 740px;
         @media screen and (max-width: 560px) {
           height: 775px;
         }
@@ -505,13 +551,49 @@ main {
         text-align: center;
         margin: 1rem 0;
       }
-      a {
+      /*a {
+        // Кнопка
         @include button;
         @include center;
         padding: 1.75rem 5rem;
         margin: 1.5rem 1rem;
         @media screen and (max-width: 320px) {
           margin: 1.5rem 0;
+        }
+      }*/
+    }
+  }
+
+  // Соц. сети
+  .social {
+    background-color: $black;
+    color: white;
+    p {
+      font-family: "Andika", sans-serif;
+      font-weight: 600;
+      font-size: 2rem;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    &__items {
+      padding: 3rem 0;
+    }
+    &__icons {
+      @include center;
+      flex-wrap: wrap;
+      a {
+        @include center;
+        &:nth-child(2) {
+          img {
+            width: 80px;
+          }
+        }
+        img {
+          width: 90px;
+          margin: 1rem;
+          &:hover {
+            transform: scale(1.05);
+          }
         }
       }
     }
