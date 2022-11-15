@@ -580,6 +580,7 @@ main .support__container p {
   font-weight: 600;
   font-size: 2rem;
   text-align: center;
+  margin: 1rem 0;
 }
 main .support__container a {
   background: linear-gradient(to right, #bc4e9c, #f80759);
