@@ -149,7 +149,7 @@ nav .nav {
   font-size: 1.1rem;
   height: 5rem;
   color: white;
-  z-index: 1;
+  z-index: 5;
 }
 nav .nav__main {
   display: flex;
@@ -262,7 +262,7 @@ nav .nav__menu {
   height: 100vh;
   width: 100%;
   background-color: #000104;
-  z-index: 2;
+  z-index: 10;
   flex-direction: column;
   top: 0;
   color: white;
@@ -321,6 +321,17 @@ main .main {
   margin-top: 5rem;
   height: calc(100vh - 5rem);
   width: 100vw;
+  position: relative;
+}
+main .main:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 main .main__items {
   display: flex;
@@ -328,6 +339,8 @@ main .main__items {
   justify-content: center;
   flex-direction: column;
   height: calc(100vh - 5rem);
+  position: relative;
+  z-index: 3;
   color: white;
 }
 main .main__items h1, main .main__items h2 {
