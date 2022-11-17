@@ -399,6 +399,7 @@ main .advantage {
   flex-direction: column;
   color: white;
   padding: 3rem 0;
+  width: 100vw;
 }
 main .advantage__containers {
   display: flex;
@@ -499,6 +500,7 @@ main .status {
   background-color: #111;
   color: white;
   padding: 2rem 3rem;
+  width: 100vw;
 }
 main .status__items {
   display: flex;
@@ -552,6 +554,7 @@ main .partners {
   flex-direction: column;
   font-size: 1.2rem;
   color: white;
+  width: 100vw;
 }
 main .partners__items {
   display: flex;
@@ -601,7 +604,8 @@ main .partners__container a {
 }
 @media screen and (max-width: 480px) {
   main .partners__container {
-    width: 100%;
+    width: calc(100vw - 2rem);
+    margin: 1rem;
   }
 }
 main .support {
@@ -611,15 +615,21 @@ main .support {
   flex-direction: column;
   background-color: #111;
   color: white;
+  width: 100vw;
 }
 main .support__items {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding: 3rem 0;
 }
 main .support__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
   /*a {
     // Кнопка
     @include button;
@@ -632,34 +642,38 @@ main .support__container {
   }*/
 }
 main .support__container iframe {
-  overflow: hidden;
-  width: 100vw;
-  height: 740px;
+  background-color: white;
+  border-radius: 8px;
+  width: 640px;
+  min-height: 810px;
+  overflow: scroll;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 656px) {
   main .support__container iframe {
-    height: 775px;
+    width: calc(100vw - 2rem);
   }
 }
-@media screen and (max-width: 429px) {
+@media screen and (max-width: 369px) {
   main .support__container iframe {
-    height: 800px;
+    width: 100vw;
   }
 }
-@media screen and (max-width: 334px) {
+@media screen and (max-width: 360px) {
   main .support__container iframe {
-    height: 850px;
+    width: 330px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 330px) {
   main .support__container iframe {
-    height: 875px;
+    width: 300px;
   }
 }
-@media screen and (max-width: 305px) {
-  main .support__container iframe {
-    height: 900px;
-  }
+main .support__container iframe::-webkit-scrollbar {
+  background-color: #000104;
+  width: 5px;
+}
+main .support__container iframe::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #bc4e9c, #f80759);
 }
 main .support__container p {
   font-family: "Andika", sans-serif;
@@ -671,6 +685,7 @@ main .support__container p {
 main .social {
   background-color: #000104;
   color: white;
+  width: 100vw;
 }
 main .social p {
   font-family: "Andika", sans-serif;
@@ -709,6 +724,7 @@ main .developer {
   justify-content: space-between;
   background-color: #111;
   color: white;
+  width: 100vw;
 }
 main .developer p {
   margin: 1rem 2rem;

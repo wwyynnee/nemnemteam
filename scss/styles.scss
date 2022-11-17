@@ -357,6 +357,7 @@ main {
     flex-direction: column;
     color: white;
     padding: 3rem 0;
+    width: 100vw;
     &__containers {
       @include center;
       flex-wrap: wrap;
@@ -441,6 +442,7 @@ main {
     background-color: $light-black;
     color: white;
     padding: 2rem 3rem;
+    width: 100vw;
     &__items {
       display: flex;
       max-width: 1920px;
@@ -486,6 +488,7 @@ main {
     flex-direction: column;
     font-size: 1.2rem;
     color: white;
+    width: 100vw;
     &__items {
       @include center;
       flex-direction: column;
@@ -520,7 +523,8 @@ main {
         width: 75%;
       }
       @media screen and (max-width: 480px) {
-        width: 100%;
+        width: calc(100vw - 2rem);
+        margin: 1rem;
       }
     }
   }
@@ -531,30 +535,40 @@ main {
     flex-direction: column;
     background-color: $light-black;
     color: white;
+    width: 100vw;
     &__items {
       @include center;
-      flex-wrap: wrap;
+      flex-direction: column;
       padding: 3rem 0;
     }
     &__container {
+      @include center;
+      text-align: center;
+      width: 100vw;
       iframe {
-        overflow: hidden;
-        width: 100vw;
-        height: 740px;
-        @media screen and (max-width: 560px) {
-          height: 775px;
+        background-color: white;
+        border-radius: 8px;
+        width: 640px;
+        min-height: 810px;
+        overflow: scroll;
+        @media screen and (max-width: 656px) {
+          width: calc(100vw - 2rem);
         }
-        @media screen and (max-width: 429px) {
-          height: 800px;
+        @media screen and (max-width: 369px) {
+          width: 100vw;
         }
-        @media screen and (max-width: 334px) {
-          height: 850px;
+        @media screen and (max-width: 360px) {
+          width: 330px;
         }
-        @media screen and (max-width: 320px) {
-          height: 875px;
+        @media screen and (max-width: 330px) {
+          width: 300px;
         }
-        @media screen and (max-width: 305px) {
-          height: 900px;
+        &::-webkit-scrollbar {
+          background-color: $black;
+          width: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: $gradient;
         }
       }
       p {
@@ -581,6 +595,7 @@ main {
   .social {
     background-color: $black;
     color: white;
+    width: 100vw;
     p {
       font-family: "Andika", sans-serif;
       font-weight: 600;
@@ -619,6 +634,7 @@ main {
     justify-content: space-between;
     background-color: $light-black;
     color: white;
+    width: 100vw;
     p {
       margin: 1rem 2rem;
       span, a {
